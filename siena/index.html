@@ -61,20 +61,17 @@
                 </section>
                 <section>
                         <h2>Why are we here?</h2>
-                        <div>Mobile App Development</div>
-                        <div>
-                            <ul>
-                                <li>Mobile Web</li>
-                                <li>Hybrid</li>
-                            </ul>
-                        </div>
-                        <div><br></div>
+                        <div style="text-align:left;margin-left:9.5em">
+                        <div>Mobile Web</div>
                         <div>HTML5 + REST</div>
+                        <div>Mobile App Development</div>
+                        <div>Hybrid</div>
                         <div>JBoss + Openshift</div>
+                        <div>AeroGear Framework</div>
                         <div>
                             <br>
                         </div>
-                        <div>Other Neat Tools</div>
+                    </div>
                         <aside class="notes">
                         </aside>
                 </section>
@@ -119,6 +116,9 @@
                         <div>
                             Demo
                         </div>
+                        <aside class="notes">
+                            Need a demo that shows responsive design in action
+                        </aside>
                     </section>
                 </section>
                 <section>
@@ -134,13 +134,14 @@
                 <section>
                     <section>
                     <h2>Mobile Web Apps</h2>
-                        <div>
-                            Huh?
-                        </div>
-                        <br>
                         <ul>
                             <li>Mobile Web Pages</li>
-                            <li>Styled as Native</li>
+                            <li>Styled as Native
+                                <ul>
+                                    <li>jQuery Mobile</li>
+                                    <li>Ratchet</li>
+                                </ul>
+                            </li>
                             <li>Add to home screen - iOS</li>
                         </ul>
                         <pre><code>link rel="apple-touch-icon-precomposed" sizes="72x72" href=".."</code></pre>
@@ -156,6 +157,7 @@
                             <li>Optimize Scripts</li>
                             <li>Limit HTTP Requests</li>
                             <li>Focus Your Content</li>
+                            <li>HTML5 + REST</li>
                         </ul>
                     </section>
                     <section>
@@ -163,9 +165,36 @@
                         <div>
                             Demo
                         </div>
+                        <aside class="notes">
+                            need a good mobile web app demo
+                        </aside>
                     </section>
                 </section>
                 <section>
+                   <section>
+                    <h2>&nbsp;</h2>
+                    <h2>What do you</h2>
+                    <h2>mean with</h2>
+                    <h1>HTML5 + REST ?</h1>
+                    </section>
+                    <section>
+                    <h2>The Mythical “HTML5”</h2>
+                    <ul>
+                        <li>W3C Suite of Specifications</li>
+                            <ul>
+                                <li>Canvas</li>
+                                <li>Geolocation</li>
+                                <li>WebSockets</li>
+                                <li>SSE (Server-Sent Events)</li>
+                                <li>CSS3</li>
+                                <li>WebWorker</li>
+                                <li>Web Storage</li>
+                            </ul>
+                        <li>and some JavaScript APIs</li>
+                    </ul>
+                    <img style="background:white" src="../lib/pics/HTML5_Logo_256.png" alt="" />
+                </section>
+
                     <section>
                     <h2>Take a REST...</h2>
                     <h2>with JAX-RS RESTFul Endpoints</h2>
@@ -174,8 +203,8 @@
                         <li>GET, POST, UPDATE, DELETE, etc...</li>
                         <li>Returns <span style="text-decoration: line-through;">XML</span>, JSON content</li>
                         <li>Annotate POJO’s for request mapping</li>
-                        <li>Error handling with Bean Validation</li>
-                        <li>CDI to tie it all together</li>
+                        <!--<li>Error handling with Bean Validation</li>
+                        <li>CDI to tie it all together</li>-->
                     </ul>
                 </section>
 
@@ -189,6 +218,20 @@
                         <li>404 Not Found</li>
                         <li>409 Conflict</li>
                     </ul>
+                </section>
+                <section>
+                    <h2>AeroGear’s Mobile Web QuickStart</h2>
+                       <p><i>The HTML5 + REST example:</i></p>
+                        <ul>
+                            <li>single page app</li>
+                            <li>jQuery / jQuery mobile</li>
+                            <li>JavaEE</li>
+                                <ul>
+                                    <li>JAX-RS Endpoints</li>
+                                    <!--<li>CDI Beans and Services</li>-->
+                                </ul>
+                            <li><a href="http://html5-aerogear.rhcloud.com/">http://html5-aerogear.rhcloud.com/</a></li>
+                        </ul>
                 </section>
                     <!--<section>
                         <h2>Concerns</h2>
@@ -205,143 +248,7 @@
                 </section>
                 <section>
                     <section>
-                        <h2>Aerogear</h2>
-                        <div>
-                            <img src="../lib/pics/aerogear-splash.png">
-                            <br>
-                        </div>
-                        <aside class="notes">
-                            Tying it all together
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>AEROGEAR.js</h2>
-                        <div>pipeline</div>
-                        <div>
-                            <br>
-                        </div>
-                        <div>data-manager</div>
-                        <div>
-                            <br>
-                        </div>
-                        <div>auth</div>
-                    </section>
-                    <section>
-                        <h2>aerogear.js</h2>
-                        <div>
-                            <br>
-                        </div>
-                        <div>demo</div>
-                    </section>
-                </section>
-                <section>
-                    <section>
-                        <h2>So How Do I Run This Thing?</h2>
-                    </section>
-                    <section>
-                        <h2>JBoss</h2>
-                    </section>
-                    <section>
-                        <h2>forge</h2>
-                    </section>
-                </section>
-                <section>
-                    <section>
-                        <h2>Why are we here?</h2>
-                        <div>Mobile App Development</div>
-                        <div>
-                            <br>
-                        </div>
-                        <div>
-                            <ul>
-                                <li>Mobile Web</li>
-                                <li style="text-decoration: underline">Hybrid</li>
-                                <li>Native</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <br>
-                        </div>
-                        <div>Other Neat Tools</div>
-                        <aside class="notes">
-                            Cordova Section
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>hybrid?</h2>
-                        <div>Apache Cordova</div>
-                        <div>
-                            <img src="../lib/pics/cordova_bot.png">
-                            <br>
-                        </div>
-                        <aside class="notes">
-                            ask if anyone has heard of cordova/phonegap
-                            .......
-                            take existing web development skills and put them on a device, but get access to some native features, like camera, battery, etc...
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>hybrid?</h2>
-                        <div>Demo</div>
-                    </section>
-                </section>
-                <section>
-                    <section>
-                        <h2>Why are we here?</h2>
-                        <div>Mobile App Development</div>
-                        <div>
-                            <br>
-                        </div>
-                        <div>
-                            <ul>
-                                <li>Mobile Web</li>
-                                <li>Hybrid</li>
-                                <li style="text-decoration: underline">Native</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <br>
-                        </div>
-                        <div>Other Neat Tools</div>
-                        <aside class="notes">
-                            Native Section
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Aerogear Native</h2>
-                        <aside class="notes">
-                            Aerogear.dmg and Aerogear android
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Aerogear Native</h2>
-                        <div>Demo</div>
-                    </section>
-                </section>
-                <section>
-                        <h2>Why are we here?</h2>
-                        <div>Mobile App Development</div>
-                        <div>
-                            <br>
-                        </div>
-                        <div>
-                            <ul>
-                                <li>Mobile Web</li>
-                                <li>Hybrid</li>
-                                <li>Native</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <br>
-                        </div>
-                        <div style="text-decoration:underline">Other Neat Tools</div>
-                        <aside class="notes">
-                            Native Section
-                        </aside>
-                    </section>
-                    <section>
                         <h2>Debugging Web Apps</h2>
-                        <br>
                         <br>
                         <div>
                             <ul>
@@ -350,8 +257,9 @@
                                 <li>Fire Bug</li>
                             </ul>
                         </div>
+                        <br>
+                        <div>What about Mobile?</div>
                     </section>
-                <section>
                     <section>
                         <h2>Debugging Mobile Web Apps</h2>
                         <div>6 Months Ago</div>
@@ -368,8 +276,6 @@
                             <br>
                         </div>
                     </section>
-                </section>
-                <section>
                     <section>
                         <h2 style="">DEBUGGING MOBILE WEB APPS</h2>
                         <h6>
@@ -418,11 +324,130 @@
                             <br>
                         </div>
                     </section>
+                    <section>
+                        <h2>Debugging mobile web apps</h2>
+                        <div>Demo</div>
+                    </section>
                 </section>
                 <section>
-                    <h2>Github</h2>
-                    <div>Social Coding</div>
-                    <img src="../lib/pics/octocat.png">
+                 <section>
+                        <h2>Going Native</h2>
+                        <div>
+                            <img src="../lib/pics/avatar_hybrid.jpg">
+                        </div>
+                        <div>as hybrid</div>
+                        <aside class="notes">
+                            ask if anyone has heard of cordova/phonegap
+                            .......
+                            take existing web development skills and put them on a device, but get access to some native features, like camera, battery, etc...
+                        </aside>
+                    </section>
+                    <section>
+                        <h2>Apache Cordova</h2>
+                        <h3>aka - PhoneGap</h3>
+                        <ul>
+                            <li>embedded browser in native app</li>
+                        <li>bridge between browser and native</li>
+                        <li>DEV => writes web app</li>
+                        <li>packages web app with the native code</li>
+                        <li>no device specific compile </li>
+                        <li>PLUGINS: between layers!</li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Apache Cordova</h2>
+                        <div>Demo</div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>Aerogear</h2>
+                        <div>
+                            <img src="../lib/pics/aerogear-splash.png">
+                            <br>
+                        </div>
+                        <aside class="notes">
+                            Tying it all together
+                        </aside>
+                    </section>
+                    <section>
+                    <h2>AeroGear</h2>
+                    <p><i>Open Source Libraries for Mobile Connectivity:</i></p>
+                    <ul>
+                        <li>JBoss community project</li>
+                        <li>Dedicated to mobile development</li>
+                        <ul>
+                            <li>HTML5 <i>and</i> native</li>
+                        </ul>
+                        <li>Facilitate all types of mobile</li>
+                        <ul>
+                            <li>Mobile Web</li>
+                            <li>Hybrid</li>
+                            <li>Native mobile</li>
+                        </ul>
+                        <li>Examples, tutorials, & community</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>AeroGear</h2>
+                       <p>current offerings:</p>
+                        <ul>
+                            <li><span style="text-decoration: underline;"><b><i>AeroGear.js</i></b></span></li>
+                            <li>AeroGear-iOS</li>
+                            <li>AeroGear.jar (Android)</li>
+                        </ul>
+                        <p>&nbsp;</p>
+                        <ul>
+                            <li>server components:</li>
+                            <ul>
+                                <li>aerogear-controller</li>
+                                <li>aerogear-security</li>
+                            </ul>
+                        </ul>
+                </section>
+
+
+                <section>
+                    <h2>AeroGear.js</h2>
+                    <ul>
+                        <li>internal usage of jQuery ($.ajax and $.extend)</li>
+                        <li>Example:</li>
+                    </ul>
+                    <pre><code>// create an empty pipeline:&#x000A;var myPipeline = AeroGear.Pipeline();&#x000A;&#x000A;// Add a connection/pipe object:&#x000A;myPipeline.add("projects");&#x000A;&#x000A;// Reading data from the 'myprojects' connection: &#x000A;myPipeline.pipes['projects'].read();&#x000A;
+                    </pre></code>
+                </section>
+                <section>
+                    <h2>AeroGear.next</h2>
+                        <ol>
+                            <li>More transports (e.g. WebSocket)</li>
+                            <li>Data Sync and Push notifications</li>
+                            <li>OData?</li>
+                            <li>More platforms ?</li>
+                        </ol>
+                        <p>&nbsp;</p>
+                        <h3>grow the community</h3>
+                    </section>
+                    <section>
+                        <h2>aerogear.js</h2>
+                        <div>Demo</div>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2>How to Run</h2>
+                        <div>JBoss Application Server 7</div>
+                        <div>OpenShift</div>
+                    </section>
+                    <section>
+                        <h2>Quickstarts</h2>
+                        <div>JBoss Developer Framework</div>
+                            <ul>
+                                <li>Maven</li>
+                                <li>Github</li>
+                            </ul>
+                    </section>
+                    <aside class="notes">http://www.jboss.org/jdf/quickstarts/get-started/</aside>
                 </section>
                 <section>
                     <h2>Questions?</h2>

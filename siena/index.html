@@ -53,7 +53,7 @@
                             <li>JBoss by Red Hat(Sr. Software Engineer)</li>
                             <li>Aerogear</li>
                             <li>Siena Class of 2002</li>
-                            <li>Blog: <a href="http://lholmquist.github.com">lholmquist.github.com</a></li>
+                            <li>Blog: <a href="http://blog.lholmquist.org">blog.lholmquist.org</a></li>
                             <li>Twitter: <a href="http://twitter.com/sienaluke">@Sienaluke</a>
                            </li>
                         </ul>
@@ -63,15 +63,14 @@
                         <h2>Why are we here?</h2>
                         <div>Mobile App Development</div>
                         <div>
-                            <br>
-                        </div>
-                        <div>
                             <ul>
                                 <li>Mobile Web</li>
                                 <li>Hybrid</li>
-                                <li>Native</li>
                             </ul>
                         </div>
+                        <div><br></div>
+                        <div>HTML5 + REST</div>
+                        <div>JBoss + Openshift</div>
                         <div>
                             <br>
                         </div>
@@ -80,49 +79,8 @@
                         </aside>
                 </section>
                 <section>
-                    <h2>Mobile Apps</h2>
-                    <div>
-                            <img src="../lib/pics/native-v-hybrid.png">
-                            <br>
-                        </div>
-                    <aside class="notes">
-                        Go over the differnent ways to create mobile
-                    </aside>
-                </section>
-                <section>
-                        <h2>HTML 5</h2>
-                        <div>NOT A MYTH!!</div>
-                        <div>
-                            <img src="../lib/pics/HTML5-logo.svg.png">
-                            <br>
-                        </div>
-                    </section>
-                <section>
                     <section>
-                        <h2>Why are we here?</h2>
-                        <div>Mobile App Development</div>
-                        <div>
-                            <br>
-                        </div>
-                        <div>
-                            <ul>
-                                <li style="text-decoration: underline">Mobile Web</li>
-                                <li>Hybrid</li>
-                                <li>Native</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <br>
-                        </div>
-                        <div>Other Neat Tools</div>
-                        <aside class="notes">
-                            Mobile Web will be the focus,  Show Hybrid Later on, and then native
-                        </aside>
-                    </section>
-                </section>
-                <section>
-                    <section>
-                        <h2>Mobile Web</h2>
+                        <h2>Mobile Web - Background</h2>
                         <div>Well, There isn't one really</div>
                         <div class="fragment">
                             <img src="../lib/pics/02-650x487.png">
@@ -130,28 +88,26 @@
                         </div>
                     </section>
                     <section>
-                        <h2>Mobile Web</h2>
-                        <div>Problems:</div>
+                        <h2>Mobile Web - Problems</h2>
                         <div>
                             <ul>
-                                <li>Small Screen Size</li>
+                                <li>Various/Small Screen Sizes</li>
                                 <li>Different Feature Sets</li>
                             </ul>
                         </div>
                     </section>
                     <section>
-                        <h2>Mobile Web</h2>
-                        <div>How Can We Fix These Problems</div>
+                        <h2>Mobile Web - Solutions</h2>
                         <br>
                         <ul>
-                            <li class="fragment">Responsive/Adaptive Web Design
+                            <li>Responsive/Adaptive Web Design
                             <ul>
                                 <li>Bootstrap</li>
                                 <li>CSS 3 Media Queries</li>
                             </ul>
                             </li>
                             <br>
-                            <li class="fragment">Feature Detection
+                            <li>Feature Detection
                             <ul>
                                 <li>Modernizr</li>
                             </ul>
@@ -166,18 +122,28 @@
                     </section>
                 </section>
                 <section>
+                    <h2>Mobile Apps</h2>
+                    <div>
+                            <img src="../lib/pics/mobiles.png">
+                            <br>
+                        </div>
+                    <aside class="notes">
+                        Go over the differnent ways to create mobile
+                    </aside>
+                </section>
+                <section>
                     <section>
                     <h2>Mobile Web Apps</h2>
                         <div>
                             Huh?
                         </div>
                         <br>
-                        <ul class="fragment">
-                            <li class="fragment">Mobile Web Pages</li>
-                            <li class="fragment">Styled as Native</li>
-                            <li class="fragment">Add to home screen - iOS</li>
+                        <ul>
+                            <li>Mobile Web Pages</li>
+                            <li>Styled as Native</li>
+                            <li>Add to home screen - iOS</li>
                         </ul>
-                        <pre class="fragment"><code>link rel="apple-touch-icon-precomposed" sizes="72x72" href=".."</code></pre>
+                        <pre><code>link rel="apple-touch-icon-precomposed" sizes="72x72" href=".."</code></pre>
                     </section>
                     <section>
                         <h2>Mobile Web Apps</h2>
@@ -185,11 +151,11 @@
                             Best Practices
                         </div>
                         <br>
-                        <ul class="fragment">
-                            <li class="fragment">Single Page</li>
-                            <li class="fragment">Optimize Scripts</li>
-                            <li class="fragment">Limit HTTP Requests</li>
-                            <li class="fragment">Focus Your Content</li>
+                        <ul>
+                            <li>Single Page</li>
+                            <li>Optimize Scripts</li>
+                            <li>Limit HTTP Requests</li>
+                            <li>Focus Your Content</li>
                         </ul>
                     </section>
                     <section>
@@ -201,10 +167,30 @@
                 </section>
                 <section>
                     <section>
-                        <h2>What is Rest?</h2>
-                        <div>show some link example's</div>
-                    </section>
-                    <section>
+                    <h2>Take a REST...</h2>
+                    <h2>with JAX-RS RESTFul Endpoints</h2>
+                    <ul>
+                        <li>Uses HTTP standards</li>
+                        <li>GET, POST, UPDATE, DELETE, etc...</li>
+                        <li>Returns <span style="text-decoration: line-through;">XML</span>, JSON content</li>
+                        <li>Annotate POJO’s for request mapping</li>
+                        <li>Error handling with Bean Validation</li>
+                        <li>CDI to tie it all together</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>REST...</h2>
+                    <li>Uses meaningful response codes</li>
+                    <ul>
+                        <li>200 OK</li>
+                        <li>201 Created</li>
+                        <li>400 Bad Request</li>
+                        <li>404 Not Found</li>
+                        <li>409 Conflict</li>
+                    </ul>
+                </section>
+                    <!--<section>
                         <h2>Concerns</h2>
                         <div>
                             <br>
@@ -215,7 +201,7 @@
                         <div>
                             <br>
                         </div>
-                    </section>
+                    </section>-->
                 </section>
                 <section>
                     <section>

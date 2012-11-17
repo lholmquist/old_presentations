@@ -112,21 +112,49 @@
                     </section>
                     <section>
                         <h2>Mobile Web - Solutions</h2>
-                        <br>
                         <ul>
                             <li>Mobile First Thinking</li>
-                            <br>
+                            <img src="../lib/pics/mobilefirst.png">
+                            </li>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Mobile Web - Solutions</h2>
+                        <ul>
                             <li>Responsive/Adaptive Web Design
                             <ul>
                                 <li>Bootstrap</li>
                                 <li>CSS 3 Media Queries</li>
                             </ul>
+                            <pre><code contenteditable>
+@media screen and (max-width: 800px) {
+.logo {
+    margin-top: 1px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    margin-top: 30px;
+    }
+}
+                            </code></pre>
                             </li>
-                            <br>
+                        </ul>
+                    </section>
+                    <section>
+                        <h2>Mobile Web - Solutions</h2>
+                        <ul>
                             <li>Feature Detection
                             <ul>
                                 <li>Modernizr</li>
                                 <li>User Agent Testing is Dead!!!</li>
+                                <pre><code contenteditable>
+Modernizr.load({
+  test: Modernizr.geolocation,
+  yep : 'geo.js',
+  nope: 'geo-polyfill.js'
+}); </code></pre>
                             </ul>
                             </li>
                         </ul>
@@ -164,7 +192,7 @@
                             </li>
                             <li>Add to home screen - iOS</li>
                         </ul>
-                        <pre><code>link rel="apple-touch-icon-precomposed" sizes="72x72" href=".."</code></pre>
+                        <pre><code>&lt;link rel="apple-touch-icon-precomposed" sizes="72x72" href=".."&gt;</code></pre>
                     </section>
                     <section>
                         <h2>Mobile Web Apps</h2>
@@ -216,15 +244,20 @@
                 </section>
 
                     <section>
-                    <h2>Take a REST...</h2>
-                    <h2>with JAX-RS RESTFul Endpoints</h2>
+                    <h2>JAX-RS RESTFul Endpoints</h2>
                     <ul>
                         <li>Uses HTTP standards</li>
                         <li>GET, POST, UPDATE, DELETE, etc...</li>
                         <li>Returns <span style="text-decoration: line-through;">XML</span>, JSON content</li>
-                        <li>Annotate POJO’s for request mapping</li>
-                        <!--<li>Error handling with Bean Validation</li>
-                        <li>CDI to tie it all together</li>-->
+                        <li>Annotate Class Methods for request mapping</li>
+                        <pre><code contenteditable>@Path("/members")
+public class SomeMemberService {
+
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public List&lt;Member&gt; getAllMembers(){ .... }
+}
+</code></pre>
                     </ul>
                 </section>
 
@@ -380,6 +413,17 @@
                     </section>
                 </section>
                 <section>
+                    <section>
+                        <h2>Aerogear</h2>
+                        <div class="fragment">
+                        <h3>The Gear your looking for</h3>
+                            <img src="../lib/pics/gear_looking_for.jpg">
+                            <br>
+                        </div>
+                        <aside class="notes">
+                            Tying it all together
+                        </aside>
+                    </section>
                     <section>
                         <h2>Aerogear</h2>
                         <div>

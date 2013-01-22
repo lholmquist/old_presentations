@@ -11,7 +11,8 @@
 
 		<link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 
-		<link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="../css/override.css">
 		<link rel="stylesheet" href="../css/theme/default.css" id="theme">
 
 		<!-- For syntax highlighting -->
@@ -59,7 +60,19 @@
                     <aside class="notes"></aside>
                 </section>
                 <section>
-                    <h2>Why Mobile</h2>
+                    the past - one thing to program for, most likely desktop
+                </section>
+                <section>
+                    client and server one the same server
+                </section>
+                <section>
+                    <h2>But Now....</h2>
+                    <img src="../lib/pics/pc_smartphone_sales.jpg">
+                </section>
+                <section>
+                    <h2>Current Stack</h2>
+                    <img style="max-width:none; max-height:none" src="../lib/pics/feature_aerogear_large.png">
+                    <aside class="notes">stack shift</aside>
                 </section>
                 <section>
                     <h2>Mobile Apps</h2>
@@ -67,27 +80,24 @@
                         <img src="../lib/pics/mobiles.png">
                         <br>
                     </div>
-                    <aside class="notes">
-                        Go over the differnent ways to create mobile
-                    </aside>
                 </section>
                 <section>
-                    <h2>AeroGear</h2>
-                    <p><i>Open Source Libraries for Mobile Connectivity:</i></p>
-                    <ul>
-                        <li>JBoss community project</li>
-                        <li>Dedicated to mobile development</li>
-                        <ul>
-                            <li>HTML5 <i>and</i> native</li>
-                        </ul>
-                        <li>Facilitate all types of mobile</li>
-                        <ul>
-                            <li>Mobile Web</li>
-                            <li>Hybrid</li>
-                            <li>Native mobile</li>
-                        </ul>
-                        <li>Examples, tutorials, & community</li>
-                    </ul>
+                    the challenges
+                </section>
+                <section>
+                    Connectivity - something about rest
+                    --other protocols
+                </section>
+                <section>
+                    Persistence
+
+                    --now there is offline to worry about,
+                    --data stored on the client devices
+                </section>
+                <section>
+                    Security - something about security
+                    --need to secure data on a device
+                    --allow access / revoke access?
                 </section>
                 <section>
                     <section>
@@ -153,26 +163,34 @@ public class SomeMemberService {
                     </aside>
                 </section>
                 <section>
-                    <h2>Current Offerings</h2>
-                       <h3>Client</h3>
+                    <h2>AeroGear</h2>
+                    <p><i>Open Source Libraries for Mobile Connectivity:</i></p>
+                    <ul>
+                        <li>JBoss community project</li>
+                        <li>Dedicated to mobile development</li>
+                        <ul>
+                            <li>HTML5 <i>and</i> native</li>
+                        </ul>
+                        <li>Facilitate all types of mobile</li>
+                        <li>Common API</li>
+                        <ul>
+                            <li>Mobile Web</li>
+                            <li>Hybrid</li>
+                            <li>Native mobile</li>
+                        </ul>
+                        <li>Examples, tutorials, & community</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Current Client Offerings</h2>
                         <ul>
                             <li>AeroGear.js</li>
                             <li>AeroGear-iOS</li>
                             <li>AeroGear.jar (Android)</li>
                         </ul>
-                        <p>&nbsp;</p>
-                        <h3>server</h3>
-                        <ul>
-                            <li>aerogear-controller</li>
-                            <!--<li>aerogear-security</li>-->
-                        </ul>
                 </section>
                 <section>
-                    <h2>
-                        Client Components
-                    </h2>
-                    Use pictures here for connectivity, persistence, securty
-                    some thing about common api
+                    <h2>AeroGear Core Client Concepts</h2>
                     <ul>
                         <li>Pipeline</li>
                         <li>Data Manager</li>
@@ -180,72 +198,38 @@ public class SomeMemberService {
                     </ul>
                 </section>
                 <section>
-                    <section>
-                        <h2>AeroGear.js</h2>
-                        something about the JS lib
-                        <ul>
-                            <li>internal usage of jQuery ($.ajax and $.extend)</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>AeroGear.js</h2>
-                        <ul>
-                            <li>Example:</li>
-                        </ul>
-                        <pre><code>// create an empty pipeline:&#x000A;var myPipeline = AeroGear.Pipeline();&#x000A;&#x000A;// Add a     connection/pipe object:&#x000A;myPipeline.add("projects");&#x000A;&#x000A;// Reading data from the 'myprojects'   connection: &#x000A;myPipeline.pipes['projects'].read();&#x000A;
-                        </pre></code>
-                    </section>
-                    <section>
-                        <h2>AeroGear.js</h2>
-                        <ul>
-                            <li>Data Manager</li>
-                            <li>Example:</li>
-                        </ul>
-                        <pre><code>// create an empty DataManager:&#x000A;var myDataManager = AeroGear.DataManager();&#x000A;&#x000A;// Add a     store object:&#x000A;myDataManager.add("projects");&#x000A;&#x000A;// Reading data from the 'myDataManager' store: & #x000A;myDataManager.stores['projects'].read();&#x000A;
-                        </pre></code>
-                    </section>
-                    <section>
-                        <h2>AeroGear.js</h2>
-                        <ul>
-                            <li>Authentication</li>
-                            <li>Example:</li>
-                        </ul>
-                        <pre><code>// create an empty DataManager:&#x000A;var myDataManager = AeroGear.DataManager();&#x000A;&#x000A;// Add a     store object:&#x000A;myDataManager.add("projects");&#x000A;&#x000A;// Reading data from the 'myDataManager' store: & #x000A;myDataManager.stores['projects'].read();&#x000A;
-                        </pre></code>
-                    </section>
+                    define pipeline and pipes
                 </section>
                 <section>
-                    <section>
-                        <h2>AeroGear iOS</h2>
-                        something about the iOS lib
-                    </section>
-                    <section>
-                        <h2>AeroGear iOS</h2>
-                        <ul>
-                            <li>internal usage of jQuery ($.ajax and $.extend)</li>
-                            <li>Example:</li>
-                        </ul>
-                        <pre><code>// create an empty pipeline:&#x000A;var myPipeline = AeroGear.Pipeline();&#x000A;&#x000A;// Add a     connection/pipe object:&#x000A;myPipeline.add("projects");&#x000A;&#x000A;// Reading data from the 'myprojects'     connection: &#x000A;myPipeline.pipes['projects'].read();&#x000A;
-                        </pre></code>
-                    </section>
+                    try to fit all 3 examples of creating a pipe and pipeline
                 </section>
                 <section>
-                    <section>
-                        <h2>AeroGear Android</h2>
-                        Something about the Android lib
-                    </section>
-                     <section>
-                        <h2>AeroGear Android</h2>
-                        <ul>
-                            <li>internal usage of jQuery ($.ajax and $.extend)</li>
-                            <li>Example:</li>
-                        </ul>
-                        <pre><code>// create an empty pipeline:&#x000A;var myPipeline = AeroGear.Pipeline();&#x000A;&#x000A;// Add a     connection/pipe object:&#x000A;myPipeline.add("projects");&#x000A;&#x000A;// Reading data from the 'myprojects'     connection: &#x000A;myPipeline.pipes['projects'].read();&#x000A;
-                        </pre></code>
-                    </section>
+                    <h1>Demo</h1>
                 </section>
                 <section>
-                    <h2>Server Component</h2>
+                    define data manager and stores
+                </section>
+                <section>
+                    try to fit all 3 examples of creating a data store
+                </section>
+                <section>
+                    <h1>Demo</h1>
+                </section>
+                <section>
+                    define authentication
+                </section>
+                <section>
+                    try to fit all 3 examples of creating auth manager
+                </section>
+                <section>
+                    <h1>Demo</h1>
+                </section>
+                <section>
+                    <h2>Current Server Offerings</h2>
+                        <ul>
+                            <li>AeroGear Controller</li>
+                            <li>AeroGear Security</li>
+                        </ul>
                 </section>
                 <section>
                     <section>
@@ -258,12 +242,19 @@ public class SomeMemberService {
                     </section>
                 </section>
                 <section>
+                    <h2>AeroGear Security</h2>
+                </section>
+                <section>
+                    <h1>Demo - Would be nice to have everything together</h1>
+                </section>
+                <section>
                     <h2>AeroGear.next</h2>
                         <ol>
                             <li>More transports (e.g. WebSocket)</li>
                             <li>Data Sync and Push notifications</li>
                             <li>OData?</li>
-                            <li>More platforms ?</li>
+                            <li>More platforms</li>
+                            <li>Cordova Plugins?</li>
                         </ol>
                         <p>&nbsp;</p>
                         <h3>grow the community</h3>
@@ -300,36 +291,6 @@ public class SomeMemberService {
                                 <li>Github</li>
                             </ul>
                 </section>
-                <!-- <section>
-                 <section>
-                        <h2>Going Native</h2>
-                        <div>
-                            <img src="../lib/pics/avatar_hybrid.jpg">
-                        </div>
-                        <div>as hybrid</div>
-                        <aside class="notes">
-                            ask if anyone has heard of cordova/phonegap
-                            .......
-                            take existing web development skills and put them on a device, but get access to some native features, like camera, battery, etc...
-                        </aside>
-                    </section>
-                    <section>
-                        <h2>Apache Cordova</h2>
-                        <h3>aka - PhoneGap</h3>
-                        <ul>
-                            <li>embedded browser in native app</li>
-                        <li>bridge between browser and native</li>
-                        <li>DEV => writes web app</li>
-                        <li>packages web app with the native code</li>
-                        <li>no device specific compile </li>
-                        <li>PLUGINS: between layers!</li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Apache Cordova</h2>
-                        <div>Demo</div>
-                    </section>
-                </section> -->
                 <section>
                     <h2>Questions?</h2>
                     <img src="../lib/pics/philosoraptor.jpg" />

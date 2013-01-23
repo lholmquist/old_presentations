@@ -51,23 +51,37 @@
                         </ul>
                     </div>
                 </section>
-                <section>
+<!--                <section>
                     <h2>Why are we here?</h2>
                     <div style="text-align:left;margin-left:8.5em">
                         <div>Mobile</div>
                         <div>AeroGear Framework</div>
                     </div>
                     <aside class="notes"></aside>
+                </section>-->
+                <section>
+                    <h2>The Past</h2>
+                    <img src="../lib/pics/kitty-surfing.jpg">
                 </section>
                 <section>
-                    the past - one thing to program for, most likely desktop
+                    <h2>This was Mobile</h2>
+                    <img src="../lib/pics/zac_morris_phone.jpg">
                 </section>
                 <section>
-                    client and server one the same server
+                    <h2>But Now...</h2>
+                    <img src="../lib/pics/new_phones.jpg">
                 </section>
                 <section>
-                    <h2>But Now....</h2>
+                    <h2>And Guess What...</h2>
                     <img src="../lib/pics/pc_smartphone_sales.jpg">
+                </section>
+                <section>
+                    <h2>And the Web...</h2>
+                    <img src="../lib/pics/03-650x487.png">
+                </section>
+                <section>
+                    <h2>New Challenges</h2>
+                    <img src="../lib/pics/angry-old-man-with-computer.jpg">
                 </section>
                 <section>
                     <h2>Current Stack</h2>
@@ -75,82 +89,33 @@
                     <aside class="notes">stack shift</aside>
                 </section>
                 <section>
-                    <h2>Mobile Apps</h2>
-                    <div>
-                        <img src="../lib/pics/mobiles.png">
-                        <br>
-                    </div>
+                    <h2>Connectivity</h2>
+                    <ul>
+                        <li>Carrier Networks</li>
+                        <li>Data Plans</li>
+                        <li>Cross Domain</li>
+                    </ul>
+                    <div>&nbsp;</div>
+                    <img src="../lib/pics/dat-internet-connection_o_802546.jpg">
                 </section>
                 <section>
-                    the challenges
+                    <h2>Persistence</h2>
+                    <ul>
+                        <li>Device Storage</li>
+                        <li>Offline</li>
+                    </ul>
+                    <div>&nbsp;</div>
+                    <img src="../lib/pics/mobile_storage.jpeg">
                 </section>
                 <section>
-                    Connectivity - something about rest
-                    --other protocols
-                </section>
-                <section>
-                    Persistence
-
-                    --now there is offline to worry about,
-                    --data stored on the client devices
-                </section>
-                <section>
-                    Security - something about security
-                    --need to secure data on a device
-                    --allow access / revoke access?
-                </section>
-                <section>
-                    <section>
-                        <h2>&nbsp;</h2>
-                        <h2>What do you</h2>
-                        <h2>mean with</h2>
-                        <h1>HTML5 + REST ?</h1>
-                    </section>
-                    <section>
-                        <h2>The Mythical “HTML5”</h2>
-                        <ul>
-                            <li>W3C Suite of Specifications</li>
-                                <ul>
-                                    <li>Canvas</li>
-                                    <li>Geolocation</li>
-                                    <li>WebSockets</li>
-                                    <li>SSE (Server-Sent Events)</li>
-                                    <li>CSS3</li>
-                                    <li>WebWorker</li>
-                                    <li>Web Storage</li>
-                                </ul>
-                            <li>and some JavaScript APIs</li>
-                        </ul>
-                        <img style="background:white" src="../lib/pics/HTML5_Logo_256.png" alt="" />
-                    </section>
-                    <section>
-                        <h2>JAX-RS RESTFul Endpoints</h2>
-                        <ul>
-                            <li>Uses HTTP standards</li>
-                            <li>GET, POST, UPDATE, DELETE, etc...</li>
-                            <li>Returns <span style="text-decoration: line-through;">XML</span>, JSON content</li>
-                            <li>Annotate Class Methods for request mapping</li>
-                            <pre><code contenteditable>@Path("/members")
-public class SomeMemberService {
-
-    @GET
-    @Produces(MediaType.APPLICATION_JSON)
-    public List&lt;Member&gt; getAllMembers(){ .... }
-}
-                            </code></pre>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>REST...</h2>
-                        <li>Uses meaningful response codes</li>
-                        <ul>
-                            <li>200 OK</li>
-                            <li>201 Created</li>
-                            <li>400 Bad Request</li>
-                            <li>404 Not Found</li>
-                            <li>409 Conflict</li>
-                        </ul>
-                    </section>
+                    <h2>Security</h2>
+                    <ul>
+                        <li>Security is Hard</li>
+                        <li>Secure Data on a Device</li>
+                        <li>Lost Phone</li>
+                    </ul>
+                    <div>&nbsp;</div>
+                    <img src="../lib/pics/you-shall-not-pass-meme.jpg">
                 </section>
                 <section>
                     <h2>Aerogear</h2>
@@ -194,73 +159,442 @@ public class SomeMemberService {
                     <ul>
                         <li>Pipeline</li>
                         <li>Data Manager</li>
-                        <li>Authentication</li>
+                        <li>Authenticator</li>
                     </ul>
                 </section>
                 <section>
-                    define pipeline and pipes
+                    <h2>What is a pipeline?</h2>
+                    <ul>
+                        <li>Collection of Server Connections( Pipes )</li>
+                    </ul>
+                    <div>&nbsp;</div>
+                    <pre><code>
+// Javascript
+var pipeline = AeroGear.Pipeline();
+                    </code></pre>
+                    <pre><code>
+// iOS
+AGPipeline* pipeline = [AGPipeline pipeline:projectsURL];
+                    </code></pre>
+                    <pre><code>
+// Android
+pipeline = new Pipeline(baseURL);
+                    </code></pre>
                 </section>
                 <section>
-                    try to fit all 3 examples of creating a pipe and pipeline
+                <section>
+                    <h2>What is a pipe?</h2>
+                    <ul>
+                        <li>Server Connection</li>
+                        <li>Read/Save/Remove</li>
+                        <li>Async Callbacks</li>
+                    </ul>
+                    <div>&nbsp;</div>
+                    <pre><code>
+// Javascript
+var myPipe = pipeline.add({
+    name: "myPipe",
+    config: {
+        baseURL: "customBaseURL"
+        endPoint: "customEndpoint"
+    }
+}).pipes.myPipe;
+
+myPipe.read( ... );
+                    </code></pre>
                 </section>
+                <section>
+                    <h2>What is a pipe?</h2>
+                    <pre><code>
+// iOS
+_myPipe = [pipeline pipe:^(id<AGPipeConfig> config) {
+                [config name:@"myPipe"];
+                [config endpoint:@"customEndpoint"];
+            }];
+
+[_myPipe read: ... ];
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>What is a pipe?</h2>
+                    <pre><code>
+// Android
+private Pipe<POJOReturn> myPipe;
+.......
+PipeConfig pipeConfig = new PipeConfig(baseURL, POJO.class);
+pipeConfig.setName("myPipe");
+pipeConfig.setEndpoint("customEndpoint");
+
+pipeline.pipe(POJOReturn.class, pipeConfig);
+
+myPipe = pipeline.get("myPipe");
+
+myPipe.read( ... )
+                    </code></pre>
+                </section>
+            </section>
                 <section>
                     <h1>Demo</h1>
                 </section>
                 <section>
-                    define data manager and stores
+                    <h2>What is a datamanager?</h2>
+                    <ul>
+                        <li>Collection of Stores</li>
+                    </ul>
+                     <div>&nbsp;</div>
+                    <pre><code>
+// Javascript
+var dataManager = AeroGear.DataManager();
+                    </code></pre>
+                    <pre><code>
+// iOS
+AGDataManager* dm = [AGDataManager manager];
+                    </code></pre>
+                    <pre><code>
+// Android
+pipeline = new Pipeline(baseURL);
+                    </code></pre>
                 </section>
                 <section>
-                    try to fit all 3 examples of creating a data store
+                <section>
+                    <h2>What is a store?</h2>
+                    <ul>
+                        <li>client side storage API</li>
+                        <li>Read/Save/Remove/Filter</li>
+                        <li>Sync Manager( coming soon )</li>
+                    </ul>
+                    <div>&nbsp;</div>
+                     <pre><code>
+// Javascript
+datamanager.add( "projects" );
+
+var projectStore = datamanger[ "projects" ];
+
+projectStore.read( ... );
+                        </code></pre>
                 </section>
+                <section>
+                    <h2>What is a store?</h2>
+                    <pre><code>
+// iOS
+id<AGStore> myStore = [dm store:^(id<AGStoreConfig> config) {
+    [config setName:@"tasks"];
+}]; 
+
+[myStore read: ... ];
+
+</code></pre>
+</section>
+               <section>
+                  <h2>What is a store?</h2>
+                    <pre><code>
+// Android
+Store<SomeObject> myStore = dataManager.store("myStore");
+
+myStore.read( ... );
+
+</code></pre>
+                </section>
+            </section>
                 <section>
                     <h1>Demo</h1>
                 </section>
                 <section>
-                    define authentication
+                    <h2>What is an authenticator?</h2>
+                    <ul>
+                        <li>Collection of Authentication Modules</li>
+                    </ul>
+                    <div>&nbsp;</div>
+                    <pre><code>
+// Javascript
+var auth = AeroGear.Auth();
+                    </code></pre>
+                    <pre><code>
+// iOS
+AGAuthenticator* authenticator = [AGAuthenticator authenticator];
+                    </code></pre>
+                    <pre><code>
+// Android
+Authenticator authenticator = new DefaultAuthenticator();
+                    </code></pre>
+                </section>
+               <section>
+                <section>
+                    <h2>What is an auth module?</h2>
+                    <ul>
+                        <li>Authentication and Enrollment API</li>
+                    </ul>
+                    <div>&nbsp;</div>
+                    <pre><code>
+// Javascript
+auth.add(
+    {
+        name: "myAuth",
+        settings: {
+            agAuth: true,
+            baseURL: "/todo-server/"
+        }
+    }
+);
+
+auth.modules['myAuth'].login( ... );
+</code></pre>
                 </section>
                 <section>
-                    try to fit all 3 examples of creating auth manager
+                    <h2>What is an auth module?</h2>
+                    <pre><code>
+// iOS
+_restAuthModule = [authenticator auth:^(id<AGAuthConfig> config) {
+            [config name:@"restAuthMod"];
+            [config baseURL:projectsURL];
+        }];
+
+[_restAuthModule login ... ]
+        </code></pre>
                 </section>
+                <section>
+                    <h2>What is an auth module?</h2>
+                    <pre><code>
+// Android
+Authenticationmodule authMod =
+        Authenticator.auth(AuthType.REST, baseURL).add();
+
+authModule.login( ... );
+</code></pre>
+                </section>
+                </section>
+            </section>
                 <section>
                     <h1>Demo</h1>
                 </section>
                 <section>
                     <h2>Current Server Offerings</h2>
                         <ul>
-                            <li>AeroGear Controller</li>
                             <li>AeroGear Security</li>
+                            <li>AeroGear Controller</li>
                         </ul>
                 </section>
                 <section>
-                    <section>
-                        <h2>AeroGear Controller</h2>
-                        Light weight MVC
-                    </section>
-                    <section>
-                        <h2>AeroGear Controller</h2>
-                        More code
-                    </section>
+                    <h2>AeroGear Security</h2>
+                    <ul>
+                        <li>Very Lean Security API</li>
+                    </ul>
                 </section>
                 <section>
                     <h2>AeroGear Security</h2>
+                    <ul>
+                        <li>Pluggable Security Providers</li>
+                    </ul>
+                    picketbox
                 </section>
                 <section>
-                    <h1>Demo - Would be nice to have everything together</h1>
+                    <h2>AeroGear Security</h2>
+                    <ul>
+                        <li>Authentication</li>
+                    </ul>
+                    <pre><code>
+@Stateless
+public class Login {
+
+    @Inject
+    private AuthenticationManager authenticationManager;
+
+    public AeroGearUser login(AeroGearUser user) {
+
+        authenticationManager.login(user);
+
+        return user;
+    }
+
+    public void logout() {
+        authenticationManager.logout();
+    }
+}
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear Security</h2>
+                    <ul>
+                        <li>Registration</li>
+                    </ul>
+                    <pre><code>
+@Stateless
+public class Register {
+
+    //For example purposes only
+    public static final String DEFAULT_ROLE = "admin";
+
+    @Inject
+    private IdentityManagement configuration;
+
+    public AeroGearUser register(AeroGearUser user) {
+        configuration.create(user);
+        configuration.grant(DEFAULT_ROLE).to(user);
+        return user;
+    }
+}
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear Security</h2>
+                    <ul>
+                        <li>REST Flavor</li>
+                        <li>A La Carte( coming soon )</li>
+                    </ul>
+                    <pre><code>
+// To Register
+host/myapp/auth/enroll
+
+// To Login
+host/myapp/auth/login
+
+// To Logout
+host/myapp/auth/logout
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear Security - OTP</h2>
+                    <ul>
+                        <li>One Time Password API</li>
+                        <li>Google Authenticator Compatible</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>AeroGear Controller</h2>
+                    <ul>
+                        <li>Server Hooks For Client Libraries</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>AeroGear Controller</h2>
+                    <ul>
+                        <li>Light weight MVC</li>
+                        <li>Java Driven... NO XML</li>
+                        <li>Fluent API</li>
+                    </ul>
+                     <pre><code>
+route()
+    .from("/")
+    .on(RequestMethod.GET)
+    .to(Home.class).index();
+            </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear Controller</h2>
+                    <ul>
+                        <li>Beans as Controller Params</li>
+                    </ul>
+                     <pre><code>
+public class Store {
+    public Car save(Car car) {
+        return car;
+    }
+}
+
+route()
+    .from("/cars")
+    .on(RequestMethod.POST)
+    .to(Store.class).save(param(Car.class));
+
+
+//A simple html form
+&lt;input type="text" name="car.color"/&gt;
+&lt;input type="text" name="car.brand"/&gt;
+            </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear Controller</h2>
+                    <ul>
+                        <li>AeroGear Security Hook</li>
+                    </ul>
+                     <pre><code>
+.route()
+    .from("/login")
+    .on(RequestMethod.POST)
+    .to(Login.class).login(param(AeroGearUser.class));
+                         </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear Controller</h2>
+                    <ul>
+                        <li>Fine Grained Security</li>
+                    </ul>
+                     <pre><code>
+.route()
+    .from("/delorean").roles("admin", "developer")
+    .on(RequestMethod.GET)
+    .to(Home.class).anotherPage();
+                         </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear Controller</h2>
+                    <ul>
+                        <li>Consume and Produce</li>
+                    </ul>
+                     <pre><code>
+route()
+    .from("/cars")
+    .on(RequestMethod.POST)
+    .consumes(MediaType.JSON.getMediaType(),
+              MediaType.HTML.getMediaType())
+    .produces(MediaType.JSON, MediaType.JSP,
+              CustomMediaTypeResponder.MEDIA_TYPE)
+    .to(Home.class).save(param(Car.class));
+                         </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear Controller</h2>
+                    <ul>
+                        <li>Pretty Error Handlers</li>
+                    </ul>
+                     <pre><code>
+route()
+    .on(YourException.class)
+    .to(ExceptionHandler.class).errorPage();
+            </code></pre>
+                </section>
+                <section>
+                    <h2>AeroGear Controller</h2>
+                    <ul>
+                        <li>CORS Support</li>
+                    </ul>
+                     <pre><code>
+@Produces
+public CorsConfiguration demoConfig() {
+    return CorsConfig.enableCorsSupport()
+        .anyOrigin()
+        .enableCookies()
+        .exposeHeaders("header1")
+        .maxAge(20)
+        .enableAllRequestMethods()
+        .validRequestHeaders("header1");
+}
+
+....
+
+@Produces
+    public CorsConfiguration demoConfig() {
+        return CorsConfig.disableCorsSupport();
+    }
+ </code></pre>
                 </section>
                 <section>
                     <h2>AeroGear.next</h2>
-                        <ol>
+                        <ul>
                             <li>More transports (e.g. WebSocket)</li>
                             <li>Data Sync and Push notifications</li>
                             <li>OData?</li>
                             <li>More platforms</li>
                             <li>Cordova Plugins?</li>
-                        </ol>
+                        </ul>
                         <p>&nbsp;</p>
                         <h3>grow the community</h3>
                 </section>
-                <!-- CDJDN STUFF -->
                 <section>
+                    How do i get the stuff
+                </section>
+                <!-- CDJDN STUFF -->
+               <!-- <section>
                     FOrge stuff
                     create a new project
                     add cdi
@@ -290,7 +624,7 @@ public class SomeMemberService {
                                 <li>Maven</li>
                                 <li>Github</li>
                             </ul>
-                </section>
+                </section>-->
                 <section>
                     <h2>Questions?</h2>
                     <img src="../lib/pics/philosoraptor.jpg" />

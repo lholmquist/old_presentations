@@ -185,6 +185,8 @@ with consume, we can "consume" JSON or HTML or something custom.  based on what 
 ## slide 31 - Controller - Paging
 By defualt contoller uses the weblinking specification for paging
 
+we use offset and limit for our page starting and how many things to return
+
 ## slide 32 - Controller - Pretty error handlers
 
 With controller we can have pretty error handlers,  Error handlers are also routes
@@ -307,13 +309,13 @@ code for JS paging
 
 ## slide 43 - DEMO
 
-demo that goes against controller, simple endpoint
+demo that goes against controller, simple endpoint - yup
 
-demo that shows paging against controller?
+demo that shows paging against controller - yup
+
+demo that shows paging against github - yup
 
 demo that show jsonp - wow aerogear demo - server agnostic
-
-demo that shows paging against github?
 
 ## slide 44 - 1.0 Goals
 

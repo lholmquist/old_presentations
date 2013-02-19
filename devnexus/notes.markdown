@@ -8,6 +8,8 @@ Intro slide
 
 who am i.
 
+from upstate NY, outside Albany,NY
+
 My main focus in on mobile web and the javascript libs
 
 check out my blog, where i like to show how to use our libs
@@ -18,7 +20,7 @@ go through the list and at the end say,  "wait a minute, that was from a differe
 
 Ok lets get started. There is all this talk about mobile first, but lets talk about the past first.
 
-In the past we were creating our applications for desktop.  we created these rich applications and a user had to install that on there desktop and we rejoiced.
+In the past we were creating our applications for desktop.  we created these rich applications and a user had to install that on there desktop and we rejoiced.   And if we had to create web pages, we really only had to make it work in a desktop browser.  we didnt have to worry about any mobile devlopment...
 
 ## Slide 4 - THis was mobile
 
@@ -28,7 +30,9 @@ Becuase this was mobile.  no one was writing apps for this thing, even though it
 
 But now,  we have these.  Smartphones,  although, really, its just a very tiny computer with a phone app.
 
-i rarely use my iphone as a phone.
+i rarely use my iphone as a phone.  it's just a way to play angry birds
+
+how many people are in the same boat?
 
 ## slide 6 - And Don't Forget
 
@@ -38,14 +42,15 @@ and don't forget these.
 
 and guess what,  mobile devices and tablets are now outselling desktops.  in fact, there are people who only have a smartphone or a tablet.
 
+if people are just doing email and surfing the web,  these devices are now awesome for this purpose
 
 ## slide 8 - And the Web
 
-this is now the web.  everything is connected.  Everything is mobile.  from our cars to our refrigirators.
+well, this is now the web.  everything is connected.  Everything is mobile.  from our cars to our refrigirators.
 
 ## slide 9 - Our Focus
 
-for our purposes,  Mobile is broken into these 3.5 to 4 categories
+for our purposes here we are going to focus our mobile Apps as apps on a phone/tablet  Mobile apps are broken into these 3.5 to 4 categories
 
 Mobile Web with REST services backend
 Hybrid App - Hybrid+
@@ -91,6 +96,8 @@ And security is just hard.  Even on the desktop, its hard,  now we have to worry
 
 These challenges are where the aerogear project is starting to focus.  yup, shameless, project pitch
 
+I'm going to give a somewhat high level overview about the project,  not to deep into code,  but there are some simple examples
+
 
 ## slide 16 - Aerogear - list items
 
@@ -100,10 +107,16 @@ read through the list
 
 the overall goal of the project is to make developers lives easier when interacting with the challenges that we listed.
 
-As developers, we want to create cool stuff, but not have to worry about all the little things.  Thats where aerogear comes in.  Let us do the heavy lifting.  Basically Aerogear is an abstraction layer framework
+As developers, we want to create cool stuff, but not have to worry about all the little things.  
+
+i know when ever i tried to create a new project/app, i was always running into the tools i was using and the frameworks.
+
+Thats where aerogear is trying to help.  Let us do the heavy lifting.  let us take care of the boilerplate that comes with creating a REST call for instance.   Basically Aerogear is an abstraction layer framework
 
 
 ## slide 17 - Current Server Offerings
+
+Even though the client side is what is what the user see's and is on the device, lets first talk about the server side.  Since we need to get our data from somewhere or connect to a REST service
 
 read list
 
@@ -116,7 +129,7 @@ A very lean security api.  we don't want to recreate the wheel
 
 one of the goals is to have a pluggable security providers.
 
-and aerogear security is an abstraction layer that will take away the complexity so that there is a common api no matte what provider you use
+and then use aerogear security as an abstraction layer that will take away the complexity so that there is a common api no matte what provider you use
 
 currently, we are supporting the Picketlink project for IDM
 
@@ -137,6 +150,8 @@ aerogear security comes with 3 REST endpoint by default
  library for generating one time passwords according to RFC 4226
 
  currently we have a java library and iOS version
+
+so a use case of this would be if you wanted to also add an authenticator to a users login, similar to have a lot of VPN's work
 
 ## slide 24 - Aerogear Controller
 
@@ -165,14 +180,14 @@ and then in our form in html, we can specify those values in the input tags
 
 ## slide 28 - COntroller - security hooks
 
-Here we are hooking into Aerogear security methods.  Controller doesn't have it's own security.
+Here we are hooking into Aerogear security methods.  Controller doesn't have it's own security.  Remeber, we want to keep it lean
 
 This is just one example,  if there was some legacy server framework you wanted to work with,  you could write a hook from controller to the old tech.
 
 
 ## slide 29 - Controller - fine grained security
 
-Here we have fine grained role based security
+Here we have fine grained role based security, so if someone hit this route and does not have that role then,  not entry.  This is coupled with aerogear security
 
 ## slide 30 - COntroller - Consume and produce
 
@@ -185,7 +200,7 @@ with consume, we can "consume" JSON or HTML or something custom.  based on what 
 ## slide 31 - Controller - Paging
 By defualt contoller uses the weblinking specification for paging
 
-we use offset and limit for our page starting and how many things to return
+we use offset and limit for our page starting and how many things to return.  setting up a paging can be hard,  controller tries to help
 
 ## slide 32 - Controller - Pretty error handlers
 
@@ -197,7 +212,7 @@ now a days,  the view and the server sometimes don't run on the same domain, and
 
 ## slide 34 - DEMO - COntroller
 
-controller demo
+controller demo - yup
 
 first show beans thing
 
@@ -222,6 +237,8 @@ You may have been at Summers talk yesterday - Aerogear ANdroid
 
 With the client side libs,  we have some core concepts.  they are ...
 
+Each one corresponds to the problems i talked about earlier.... COnnectivity, Persistence, Security
+
 i know you are dying with anticipation to find out what these are,  so lets check them out
 
 I'm going to discuss these in reverse order,  each concept actually gets more mature as we go on
@@ -238,12 +255,20 @@ an auth module contains both Authentication and enrollment api's
 
 you can then easily call the login method that will hit your login REST endpoint on the server
 
+by default, the endpoints "login", "enroll" and "logout",  but these can be overriden
+
+by defualt we are using a token based security,  after a successful login, the server returns a token and then on each subsequent request with pipeline,  which we haven't talked about yet, aerogear will setup the headers for you
+
 we use enroll for registration since register is a reserved word in iOS. and we want to keep things similar
 
 hit down a couple times
 
 
-## DEMO - Maybe not
+## DEMO - security
+
+this is a demo we created for java one,  the server side security lib is a bit outdated here but it should be ok for our purposes in showing the client libs at work
+
+At the end of the demo,  We are in the process of adding controller in
 
 ## slide 39 - what is a datamanger
 
@@ -277,7 +302,9 @@ show that session storage is still there
 
 do a remove
 
-then do a read
+then do a read,
+
+maybe add another record to the memory store
 
 the thing to note here is the common api
 
@@ -317,9 +344,13 @@ demo that shows paging against github - yup
 
 demo that show jsonp - wow aerogear demo - server agnostic
 
+demo that shows the ios version
+
 ## slide 44 - 1.0 Goals
 
 you might be asking, is this just another REST library,  yes and no.  for 1.0 we are really focused on creating a solid foundation.
+
+our CR1 should be out next week and a Final release will be in march
 
 ## slide 45 - 2.0
 
@@ -329,11 +360,19 @@ Unified push,
 
 Data sync - including collision detection
 
+offline - which ties into data sync
+
 More Authentication Modules - oauth, social logins
 
 Cordova PLugins, where they fit.  like core data
 
 scaffolding with forge.  forge is a RAD tool.  get started quickly with controller and our client libs
+
+New platforms - this a future thing, windows phone?
+
+and of course we want to grow the community,  this is an open source project,  so check it out and get involved,  it's possible we are going to be looking for new people,  so contributing is better than any resume.
+
+
 
 ## slide 46 - 50
 
